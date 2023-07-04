@@ -1,0 +1,3 @@
+[submodule "soloist"]
+	path = soloist
+	url = https://github.com/Yen444/soloist.git
