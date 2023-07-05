@@ -8,7 +8,6 @@ from services.service import Service, PublishSubscribe, DialogSystem
 from services.hci import ConsoleInput, ConsoleOutput
 from utils.logger import DiasysLogger, LogLevel
 
-# from utils.topics import Topic
 
 sys.path.append('../soloist')
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
@@ -105,7 +104,7 @@ class WizardService(Service):
         self.update_memory(gen_user_utterance)
         print("Memory tracker", self.memory)
         response, bs = get_response(self.memory)
-        print("Belief States", bs)
+        print("Belief States",)
         return response
     
     def update_memory(self, utterance):
