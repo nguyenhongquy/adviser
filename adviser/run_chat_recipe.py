@@ -10,10 +10,11 @@ from utils.logger import DiasysLogger, LogLevel
 
 
 sys.path.append('../soloist')
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+os.environ['CUDA_VISIBLE_DEVICES'] = '2' # should be available at test time
 
 from soloist.server import *
-args.model_name_or_path = '../soloist/examples/recipe/recipe_models'
+# args.model_name_or_path = '../soloist/examples/recipe/recipe_models_all_10e'
+args.model_name_or_path = '../soloist/examples/recipe/recipe_models_noneg_10e'
 print("imported recipe model")
 args.length = 100
 main()
@@ -85,7 +86,9 @@ user_out = ConsoleOutput(domain="")
 
 
 class WizardService(Service):
-    def __init__(self, domain=None, logger=None):
+    def __init__(self, domain=None, logger=None,
+                sub_topic_domains = {'gen_user_utterance': '',
+                                    'sys_utterance': ''}):
         Service.__init__(self, domain=domain)
         self.memory = []
 
@@ -102,17 +105,19 @@ class WizardService(Service):
     
     def say_something_meaningful(self, gen_user_utterance):
         self.update_memory(gen_user_utterance)
-        print("Memory tracker", self.memory)
+        print(f"***History tracker: {self.memory}***\n")
         response, bs = get_response(self.memory)
-        print("Belief States",)
+        print(f"***Belief States tracker: {bs}***\n")
         return response
     
     def update_memory(self, utterance):
         self.memory.append(utterance.strip())
         return None
         
+
     
 logger = DiasysLogger(console_log_lvl=LogLevel.DIALOGS)
+
 wizard_service = WizardService()
 ds = DialogSystem(services=[user_in, user_out, wizard_service])
 
@@ -122,7 +127,9 @@ if not error_free:
 
 ds.draw_system_graph()
 
-for _ in range(1):
+number_dialogues = 1
+for _ in range(number_dialogues):
+    print("begin chatting")
     ds.run_dialog({'gen_user_utterance': ""})
 
 ds.shutdown()
