@@ -10,28 +10,32 @@ from utils.logger import DiasysLogger, LogLevel
 
 
 sys.path.append('../soloist')
-os.environ['CUDA_VISIBLE_DEVICES'] = '2' # should be available at test time
+os.environ['CUDA_VISIBLE_DEVICES'] = '8' # should be available at test time
 
 from soloist.server import *
-# args.model_name_or_path = '../soloist/examples/recipe/recipe_models_all_10e'
-args.model_name_or_path = '../soloist/examples/recipe/recipe_models_noneg_10e'
+args.model_name_or_path = '../soloist/soloist/finetuned_models/all_9e_baseline'
+
 print("imported recipe model")
-args.length = 100
+args.length = 50
 main()
 
-def parse(sampled_results):
+def parse(sampled_results: str) -> tuple((dict, str)):
+    """
+    """
     candidates = []
     for system_response in sampled_results:
         system_response = system_response.split('system :')[-1]
         system_response = ' '.join(word_tokenize(system_response))
         system_response = system_response.replace('[ ','[').replace(' ]',']')
+        if 'user' in system_response:
+            system_response = system_response[system_response.find('user')]
         candidates.append(system_response)
 
     candidates_bs = []
     for system_response in sampled_results:
         system_response = system_response.strip()
         system_response = system_response.split('system : ')[0]
-        system_response = system_response.split('dp : ')[0]
+        system_response = system_response[: system_response.find('<EOB>')]
         system_response = ' '.join(system_response.split()[:])
         svs = system_response.split(';')
         bs_state = {}
@@ -97,6 +101,7 @@ class WizardService(Service):
         if gen_user_utterance == '':
             return {'sys_utterance': 'Please chat with the agent'}
         elif 'bye' in gen_user_utterance:
+            self.memory = []
             return {'sys_utterance': 'Good bye'}
         else:
             response = self.say_something_meaningful(gen_user_utterance)
@@ -115,7 +120,6 @@ class WizardService(Service):
         return None
         
 
-    
 logger = DiasysLogger(console_log_lvl=LogLevel.DIALOGS)
 
 wizard_service = WizardService()
@@ -127,7 +131,7 @@ if not error_free:
 
 ds.draw_system_graph()
 
-number_dialogues = 1
+number_dialogues = 12
 for _ in range(number_dialogues):
     print("begin chatting")
     ds.run_dialog({'gen_user_utterance': ""})
