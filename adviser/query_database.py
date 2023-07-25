@@ -65,26 +65,32 @@ def query_database(belief : dict, response: str, db_state=None):
    # initialize db_state
    if db_state is None:
       db_state = {}
-   #print(f'belief input: {belief}')
-   #print(f'response input: {response}')
-   # encode query from belief state
    query = "SELECT * FROM Recipes WHERE"
    for slot, val in belief.items():
       #get rig of some strange tokens
       val = val.replace('<EOB> <EOKB> <EODP>', '')
       val = val.strip()
-      #print(f'slot: {slot}')
-      #print(f'val: {val}')
-      if val == '[recommended_recipe_name_1]':
-         name = db_state['recommended_recipe_name_1']
-         name = "'" f'%{name}%' + "'"
-         query = f'SELECT * FROM Recipes WHERE name LIKE {name}'
-         break
-      elif val == '[recommended_recipe_name_2]':
-         name = db_state['recommended_recipe_name_2']
-         name = "'" f'%{name}%' + "'"
-         query = f'SELECT * FROM Recipes WHERE name LIKE {name}'
-         break
+      if val == 'recommended_recipe_name_1' or val == '[recommended_recipe_name_1]':
+         if 'recommended_recipe_name_1' in db_state.keys():
+            name = db_state['recommended_recipe_name_1']
+            name = "'" f'%{name}%' + "'"
+            query = f'SELECT * FROM Recipes WHERE name LIKE {name}'
+            break
+         else:
+            continue
+      elif val == 'recommended_recipe_name_2' or val == '[recommended_recipe_name_2]':
+         if 'recommended_recipe_name_2' in db_state.keys():
+            name = db_state['recommended_recipe_name_2']
+            name = "'" f'%{name}%' + "'"
+            query = f'SELECT * FROM Recipes WHERE name LIKE {name}'
+            break
+         elif 'recommended_recipe_name_1' in db_state.keys():
+            name = db_state['recommended_recipe_name_1']
+            name = "'" f'%{name}%' + "'"
+            query = f'SELECT * FROM Recipes WHERE name LIKE {name}'
+            break
+         else:
+            continue
       else: 
          if val == 'dont care' or val == 'not mentioned' or val == "don't care":
             query = query
@@ -111,8 +117,6 @@ def query_database(belief : dict, response: str, db_state=None):
    cursor.execute(query)  
    matches = cursor.fetchall() 
    random.shuffle(matches)
-   #print(matches)
-   #print(len(matches))
    # lexicalize response
    if len(matches) == 0:
       response = 'Sorry. I do not have any recipe that meet your requests at the moment. What else can I help you?'
