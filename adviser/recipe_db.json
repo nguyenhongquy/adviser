@@ -1,0 +1,820 @@
+[
+    {
+        "id": 1,
+        "name": "Creamy Garlic Parmesan Chicken",
+        "type": "Main Dish",
+        "ingredients": [
+            "4 boneless, skinless chicken breasts",
+            "1 tablespoon olive oil",
+            "4 cloves garlic, minced",
+            "1 cup heavy cream",
+            "1/2 cup grated Parmesan cheese",
+            "1 teaspoon Italian seasoning",
+            "Salt and black pepper to taste"
+        ],
+        "instructions": [
+            "Heat olive oil in a large skillet over medium heat.",
+            "Add minced garlic and cook until fragrant.",
+            "Season chicken breasts with salt, pepper, and Italian seasoning.",
+            "Place chicken breasts in the skillet and cook until browned on both sides.",
+            "Remove chicken from the skillet and set aside.",
+            "In the same skillet, add heavy cream and Parmesan cheese.",
+            "Stir until the sauce thickens and cheese is melted.",
+            "Return the chicken to the skillet and simmer for a few minutes.",
+            "Serve the creamy garlic Parmesan chicken hot."
+        ],
+        "substitution": [
+            [
+                "Parmesan cheese",
+                "Grana Padano"
+            ]
+        ],
+        "equipment": [
+            "Large skillet",
+            "Spatula",
+            "Measuring cups",
+            "Measuring spoons"
+        ],
+        "time": "30 minutes",
+        "is_quick": "yes",
+        "difficulty": "Medium",
+        "is_vegan": "no"
+    },
+    {
+        "id": 2,
+        "name": "Chocolate Lava Cake",
+        "type": "Dessert",
+        "ingredients": [
+            "1/2 cup unsalted butter",
+            "4 ounces bittersweet chocolate, chopped",
+            "1 cup powdered sugar",
+            "2 large eggs",
+            "2 large egg yolks",
+            "1/2 teaspoon vanilla extract",
+            "1/4 cup all-purpose flour",
+            "Pinch of salt"
+        ],
+        "instructions": [
+            "Preheat the oven to 425\u00b0F (220\u00b0C).",
+            "Grease four ramekins with butter and dust with cocoa powder.",
+            "Place butter and chocolate in a microwave-safe bowl.",
+            "Microwave in 30-second intervals, stirring until melted and smooth.",
+            "In a separate bowl, whisk together powdered sugar, eggs, egg yolks, and vanilla extract.",
+            "Add the melted chocolate mixture to the egg mixture and whisk until well combined.",
+            "Sift in the flour and salt, and fold until just combined.",
+            "Divide the batter equally among the prepared ramekins.",
+            "Bake for about 12-14 minutes, until the edges are set and the center is still slightly jiggly.",
+            "Remove from the oven and let cool for a minute.",
+            "Gently run a knife around the edges and invert onto serving plates.",
+            "Serve the chocolate lava cakes warm with a dusting of powdered sugar or a scoop of ice cream."
+        ],
+        "substitution": "",
+        "equipment": [
+            "Ramekins",
+            "Microwave-safe bowl",
+            "Whisk",
+            "Spatula",
+            "Measuring cups",
+            "Measuring spoons"
+        ],
+        "time": "20 minutes",
+        "is_quick": "yes",
+        "difficulty": "Easy",
+        "is_vegan": "no"
+    },
+    {
+        "id": 3,
+        "name": "Quinoa Salad with Lemon Vinaigrette",
+        "type": "Salad",
+        "ingredients": [
+            "1 cup quinoa",
+            "2 cups water",
+            "1 cucumber, diced",
+            "1 red bell pepper, diced",
+            "1/2 red onion, finely chopped",
+            "1 cup cherry tomatoes, halved",
+            "1/4 cup chopped fresh parsley",
+            "1/4 cup chopped fresh mint",
+            "1/4 cup extra-virgin olive oil",
+            "2 tablespoons fresh lemon juice",
+            "1 clove garlic, minced",
+            "Salt and black pepper to taste"
+        ],
+        "instructions": [
+            "Rinse the quinoa thoroughly under cold water.",
+            "In a saucepan, bring the water to a boil and add the rinsed quinoa.",
+            "Reduce heat, cover, and simmer for about 15-20 minutes or until the water is absorbed.",
+            "Remove from heat and let it sit covered for 5 minutes.",
+            "Fluff the quinoa with a fork and let it cool.",
+            "In a large bowl, combine the cooked quinoa, cucumber, red bell pepper, red onion, cherry tomatoes, parsley, and mint.",
+            "In a small bowl, whisk together the olive oil, lemon juice, minced garlic, salt, and black pepper.",
+            "Pour the lemon vinaigrette over the quinoa salad and toss to coat evenly.",
+            "Taste and adjust seasonings if needed.",
+            "Serve the quinoa salad chilled or at room temperature."
+        ],
+        "substitution": "",
+        "equipment": [
+            "Saucepan",
+            "Large bowl",
+            "Small bowl",
+            "Fork",
+            "Knife",
+            "Cutting board",
+            "Measuring cups",
+            "Measuring spoons"
+        ],
+        "time": "30 minutes",
+        "is_quick": "yes",
+        "difficulty": "Easy",
+        "is_vegan": "yes"
+    },
+    {
+        "id": 4,
+        "name": "Spicy Thai Basil Tofu Stir-Fry",
+        "type": "Main Dish",
+        "ingredients": [
+            "14 ounces firm tofu, drained and cubed",
+            "2 tablespoons soy sauce",
+            "2 tablespoons hoisin sauce",
+            "2 tablespoons Sriracha sauce",
+            "1 tablespoon vegetable oil",
+            "3 cloves garlic, minced",
+            "1 red bell pepper, sliced",
+            "1 green bell pepper, sliced",
+            "1 onion, sliced",
+            "1 cup fresh basil leaves",
+            "Salt to taste",
+            "Cooked rice, for serving"
+        ],
+        "instructions": [
+            "In a bowl, combine soy sauce, hoisin sauce, and Sriracha sauce. Set aside.",
+            "In a large skillet or wok, heat vegetable oil over medium-high heat.",
+            "Add minced garlic and cook until fragrant.",
+            "Add cubed tofu and cook until lightly browned on all sides.",
+            "Remove tofu from the skillet and set aside.",
+            "In the same skillet, add sliced bell peppers and onion. Stir-fry until slightly softened.",
+            "Add the tofu back to the skillet and pour the sauce mixture over the tofu and vegetables.",
+            "Stir-fry for a few minutes until everything is well-coated and heated through.",
+            "Add fresh basil leaves and stir-fry for an additional minute.",
+            "Season with salt to taste.",
+            "Serve the spicy Thai basil tofu stir-fry over cooked rice."
+        ],
+        "substitution": "",
+        "equipment": [
+            "Large skillet or wok",
+            "Bowl",
+            "Wooden spoon or spatula",
+            "Knife",
+            "Cutting board",
+            "Measuring spoons"
+        ],
+        "time": "25 minutes",
+        "is_quick": "yes",
+        "difficulty": "Medium",
+        "is_vegan": "yes"
+    },
+    {
+        "id": 5,
+        "name": "Beef and Broccoli Stir-Fry",
+        "type": "Main Dish",
+        "ingredients": [
+            "1 pound beef sirloin, thinly sliced",
+            "2 tablespoons soy sauce",
+            "2 tablespoons oyster sauce",
+            "1 tablespoon cornstarch",
+            "1 tablespoon vegetable oil",
+            "3 cloves garlic, minced",
+            "1 teaspoon grated ginger",
+            "2 cups broccoli florets",
+            "1/2 cup sliced carrots",
+            "1/2 cup sliced mushrooms",
+            "1/2 cup beef broth",
+            "Salt and black pepper to taste",
+            "Cooked rice, for serving"
+        ],
+        "instructions": [
+            "In a bowl, combine soy sauce, oyster sauce, and cornstarch. Set aside.",
+            "In a large skillet or wok, heat vegetable oil over medium-high heat.",
+            "Add minced garlic and grated ginger. Cook until fragrant.",
+            "Add sliced beef to the skillet and stir-fry until browned.",
+            "Remove beef from the skillet and set aside.",
+            "In the same skillet, add broccoli florets, sliced carrots, and sliced mushrooms.",
+            "Stir-fry until the vegetables are crisp-tender.",
+            "Pour beef broth into the skillet and bring to a simmer.",
+            "Add the beef back to the skillet and pour the sauce mixture over the beef and vegetables.",
+            "Stir-fry for a few minutes until the sauce thickens and coats everything.",
+            "Season with salt and black pepper to taste.",
+            "Serve the beef and broccoli stir-fry over cooked rice."
+        ],
+        "substitution": "",
+        "equipment": [
+            "Large skillet or wok",
+            "Bowl",
+            "Wooden spoon or spatula",
+            "Knife",
+            "Cutting board",
+            "Measuring spoons"
+        ],
+        "time": "30 minutes",
+        "is_quick": "yes",
+        "difficulty": "Medium",
+        "is_vegan": "no"
+    },
+    {
+        "id": 6,
+        "name": "No-Bake Oreo Cheesecake",
+        "type": "Dessert",
+        "ingredients": [
+            "24 Oreo cookies",
+            "5 tablespoons unsalted butter, melted",
+            "16 ounces cream cheese, softened",
+            "1/2 cup granulated sugar",
+            "1 teaspoon vanilla extract",
+            "1 cup heavy cream",
+            "Additional Oreo cookies for topping (optional)"
+        ],
+        "instructions": [
+            "1. In a food processor, crush 20 Oreo cookies into fine crumbs.",
+            "2. In a bowl, combine the crushed Oreo cookies and melted butter, mixing until the crumbs are evenly coated.",
+            "3. Press the Oreo mixture into the bottom of a greased 9-inch springform pan, creating an even crust layer.",
+            "4. In a separate mixing bowl, beat the cream cheese, granulated sugar, and vanilla extract until smooth and creamy.",
+            "5. In another bowl, whip the heavy cream until stiff peaks form.",
+            "6. Gently fold the whipped cream into the cream cheese mixture until well combined.",
+            "7. Pour the cream cheese mixture over the Oreo crust in the springform pan, spreading it evenly.",
+            "8. Smooth the top with a spatula and refrigerate for at least 4 hours or overnight to set.",
+            "9. Before serving, crush the remaining Oreo cookies and sprinkle them on top of the cheesecake as a garnish (optional).",
+            "10. Slice and serve the No-Bake Oreo Cheesecake, and enjoy!"
+        ],
+        "substitution": "",
+        "equipment": [
+            "Food processor",
+            "9-inch springform pan"
+        ],
+        "time": "4 hours (including refrigeration time)",
+        "is_quick": "no",
+        "difficulty": "Easy",
+        "is_vegan": "no"
+    },
+    {
+        "id": 7,
+        "name": "Caprese Pasta Salad",
+        "type": "Salad",
+        "ingredients": [
+            "8 ounces fusilli pasta",
+            "1 cup cherry tomatoes, halved",
+            "1 cup fresh mozzarella balls, halved",
+            "1/4 cup fresh basil leaves, chopped",
+            "2 tablespoons extra-virgin olive oil",
+            "1 tablespoon balsamic vinegar",
+            "1 clove garlic, minced",
+            "Salt and black pepper to taste"
+        ],
+        "instructions": [
+            "Cook the fusilli pasta according to the package instructions until al dente.",
+            "Drain the cooked pasta and rinse under cold water to cool.",
+            "In a large bowl, combine the cooked pasta, cherry tomatoes, mozzarella balls, and chopped basil leaves.",
+            "In a small bowl, whisk together the olive oil, balsamic vinegar, minced garlic, salt, and black pepper.",
+            "Pour the dressing over the pasta salad and toss to coat all the ingredients.",
+            "Taste and adjust the seasoning if needed.",
+            "Chill the caprese pasta salad in the refrigerator for at least 30 minutes before serving.",
+            "Serve the salad cold and enjoy!"
+        ],
+        "substitution": "",
+        "equipment": [
+            "Large pot",
+            "Colander",
+            "Large bowl",
+            "Small bowl",
+            "Whisk",
+            "Spatula",
+            "Knife",
+            "Cutting board"
+        ],
+        "time": "25 minutes",
+        "is_quick": "yes",
+        "difficulty": "Easy",
+        "is_vegan": "no"
+    },
+    {
+        "id": 8,
+        "name": "Mushroom Risotto",
+        "type": "Main Dish",
+        "ingredients": [
+            "6 cups vegetable broth",
+            "2 tablespoons olive oil",
+            "1 onion, finely chopped",
+            "2 cloves garlic, minced",
+            "1 pound mushrooms, sliced",
+            "1 1/2 cups Arborio rice",
+            "1/2 cup dry white wine",
+            "1/2 cup grated Parmesan cheese",
+            "2 tablespoons unsalted butter",
+            "2 tablespoons chopped fresh parsley",
+            "Salt and black pepper to taste"
+        ],
+        "instructions": [
+            "In a saucepan, heat the vegetable broth and keep it warm over low heat.",
+            "In a large skillet or pot, heat olive oil over medium heat.",
+            "Add chopped onion and minced garlic. Saut\u00e9 until translucent and fragrant.",
+            "Add sliced mushrooms and cook until they release their moisture and become golden brown.",
+            "Stir in Arborio rice and cook for a few minutes until the grains are lightly toasted.",
+            "Pour in the white wine and cook until it is absorbed by the rice.",
+            "Begin adding the warm vegetable broth to the rice, one ladleful at a time, stirring constantly.",
+            "Continue adding broth and stirring until the rice is creamy and al dente.",
+            "This process takes about 20-25 minutes.",
+            "Remove the risotto from heat and stir in grated Parmesan cheese and butter.",
+            "Season with salt and black pepper to taste.",
+            "Garnish with chopped fresh parsley.",
+            "Let the risotto rest for a few minutes before serving.",
+            "Serve the mushroom risotto warm and enjoy!"
+        ],
+        "substitution": "",
+        "equipment": [
+            "Saucepan",
+            "Large skillet or pot",
+            "Wooden spoon",
+            "Measuring cups",
+            "Measuring spoons",
+            "Grater",
+            "Knife",
+            "Cutting board"
+        ],
+        "time": "45 minutes",
+        "is_quick": "no",
+        "difficulty": "Medium",
+        "is_vegan": "yes"
+    },
+    {
+        "id": 9,
+        "name": "Grilled Chicken Caesar Salad",
+        "type": "Salad",
+        "ingredients": [
+            "2 boneless, skinless chicken breasts",
+            "1 head of romaine lettuce",
+            "1 cup cherry tomatoes, halved",
+            "1/2 cup croutons",
+            "1/4 cup grated Parmesan cheese",
+            "Caesar dressing to taste"
+        ],
+        "instructions": [
+            "Preheat the grill to medium-high heat.",
+            "Season the chicken breasts with salt and pepper.",
+            "Grill the chicken for about 6-8 minutes per side, or until cooked through. Let it rest for a few minutes before slicing.",
+            "Meanwhile, wash and chop the romaine lettuce into bite-sized pieces.",
+            "In a large bowl, combine the chopped lettuce, cherry tomatoes, croutons, and grated Parmesan cheese.",
+            "Slice the grilled chicken into thin strips and add it to the salad.",
+            "Drizzle the Caesar dressing over the salad and toss gently to combine.",
+            "Serve immediately and enjoy!"
+        ],
+        "substitution": "",
+        "equipment": "Grill",
+        "time": "20 minutes",
+        "is_quick": "yes",
+        "difficulty": "Easy",
+        "is_vegan": "no"
+    },
+    {
+        "id": 10,
+        "name": "Berry Banana Smoothie",
+        "type": "Beverage",
+        "ingredients": [
+            "1 ripe banana",
+            "1 cup mixed berries (strawberries, blueberries, raspberries)",
+            "1 cup milk (dairy or plant-based)",
+            "1/2 cup yogurt (optional)",
+            "1 tablespoon honey or maple syrup (optional)",
+            "Ice cubes"
+        ],
+        "instructions": [
+            "1. In a blender, add the ripe banana, mixed berries, milk, yogurt (if using), honey or maple syrup (if desired), and a handful of ice cubes.",
+            "2. Blend until smooth and creamy, adjusting the consistency by adding more milk if needed.",
+            "3. Taste and add more sweetener if desired.",
+            "4. Pour the smoothie into glasses and serve immediately.",
+            "5. Enjoy!"
+        ],
+        "substitution": "",
+        "equipment": "Blender",
+        "time": "5 minutes",
+        "is_quick": "yes",
+        "difficulty": "Easy",
+        "is_vegan": "yes"
+    },
+    {
+        "id": 11,
+        "name": "Easy Chicken Stir-Fry",
+        "type": "Main Dish",
+        "ingredients": [
+            "2 boneless, skinless chicken breasts, sliced",
+            "2 tablespoons vegetable oil",
+            "1 bell pepper, thinly sliced",
+            "1 carrot, julienned",
+            "1 cup broccoli florets",
+            "2 cloves garlic, minced",
+            "2 tablespoons soy sauce",
+            "1 tablespoon oyster sauce",
+            "1 teaspoon cornstarch",
+            "Salt and pepper to taste"
+        ],
+        "instructions": [
+            "1. In a large skillet or wok, heat the vegetable oil over medium-high heat.",
+            "2. Add the sliced chicken breasts to the skillet and cook until browned and cooked through.",
+            "3. Remove the cooked chicken from the skillet and set aside.",
+            "4. In the same skillet, add the bell pepper, carrot, broccoli, and minced garlic.",
+            "5. Stir-fry the vegetables for a few minutes until they are crisp-tender.",
+            "6. In a small bowl, whisk together the soy sauce, oyster sauce, cornstarch, salt, and pepper.",
+            "7. Return the cooked chicken to the skillet and pour the sauce over the chicken and vegetables.",
+            "8. Stir-fry everything together for a couple of minutes until the sauce thickens and coats the ingredients.",
+            "9. Taste and adjust the seasonings if needed.",
+            "10. Remove from heat and serve the Easy Chicken Stir-Fry hot with steamed rice or noodles.",
+            "11. Enjoy!"
+        ],
+        "substitution": "",
+        "equipment": "Skillet or wok",
+        "time": "20 minutes",
+        "is_quick": "yes",
+        "difficulty": "Easy",
+        "is_vegan": "no"
+    },
+    {
+        "id": 12,
+        "name": "Quick Avocado Toast",
+        "type": "Breakfast",
+        "ingredients": [
+            "2 slices of bread",
+            "1 ripe avocado",
+            "1 tablespoon lime juice",
+            "Pinch of red pepper flakes",
+            "Salt and pepper to taste"
+        ],
+        "instructions": [
+            "Toast the bread slices until golden and crisp.",
+            "In a bowl, mash the ripe avocado and mix it with lime juice, salt, and pepper.",
+            "Spread the avocado mixture generously on the toasted bread slices.",
+            "Sprinkle red pepper flakes on top for a spicy kick.",
+            "Serve the avocado toast as a quick and delicious breakfast or snack."
+        ],
+        "substitution": "",
+        "equipment": "Toaster",
+        "time": "10 minutes",
+        "is_quick": "yes",
+        "difficulty": "Easy",
+        "is_vegan": "yes"
+    },
+    {
+        "id": 13,
+        "name": "Turkey Spaghetti Bolognese",
+        "type": "Main Dish",
+        "ingredients": [
+            "1 pound ground turkey",
+            "1 onion, diced",
+            "2 cloves of garlic, minced",
+            "1 can crushed tomatoes",
+            "2 tablespoons tomato paste",
+            "1 teaspoon dried basil",
+            "1 teaspoon dried oregano",
+            "8 ounces spaghetti",
+            "Grated Parmesan cheese for garnish (optional)"
+        ],
+        "instructions": [
+            "In a pan, heat olive oil and saut\u00e9 diced onions and minced garlic until fragrant.",
+            "Add ground turkey and cook until browned and cooked through.",
+            "Stir in crushed tomatoes, tomato paste, dried basil, and dried oregano. Simmer the sauce for about 20 minutes.",
+            "Meanwhile, cook the spaghetti according to the package instructions.",
+            "Serve the Bolognese sauce over the cooked spaghetti and garnish with grated Parmesan cheese, if desired."
+        ],
+        "substitution": [
+            [
+                "turkey",
+                "beef"
+            ]
+        ],
+        "equipment": [
+            "Pan",
+            "pot"
+        ],
+        "time": "30 minutes",
+        "is_quick": "yes",
+        "difficulty": "Easy",
+        "is_vegan": "no"
+    },
+    {
+        "id": 14,
+        "name": "Beef Tacos with Chipotle Sauce",
+        "type": "Main Dish",
+        "ingredients": [
+            "1 lb ground beef",
+            "1 onion, chopped",
+            "2 cloves garlic, minced",
+            "1 tbsp chipotle pepper in adobo sauce, minced",
+            "1 tsp ground cumin",
+            "1 tsp chili powder",
+            "Salt and pepper to taste",
+            "8 small flour tortillas",
+            "Toppings: shredded lettuce, diced tomatoes, shredded cheese, sour cream",
+            "Optional garnish: fresh cilantro, lime wedges"
+        ],
+        "instructions": [
+            "In a large skillet, cook the ground beef over medium heat until browned.",
+            "Add the chopped onion, minced garlic, chipotle pepper, cumin, chili powder, salt, and pepper. Cook for an additional 5 minutes.",
+            "Warm the flour tortillas in a separate skillet or in the microwave.",
+            "Assemble the tacos by placing a spoonful of the beef mixture onto each tortilla. Add your desired toppings.",
+            "Garnish with fresh cilantro and serve with lime wedges on the side.",
+            "Enjoy your delicious beef tacos with chipotle sauce!"
+        ],
+        "substitution": "",
+        "equipment": "Skillet",
+        "time": "30 minutes",
+        "is_quick": "yes",
+        "difficulty": "Medium",
+        "is_vegan": "no"
+    },
+    {
+        "id": 15,
+        "name": "Vegan Chocolate Cake",
+        "type": "Dessert",
+        "ingredients": [
+            "1 1/2 cups all-purpose flour",
+            "1 cup granulated sugar",
+            "1/4 cup unsweetened cocoa powder",
+            "1 tsp baking soda",
+            "1/2 tsp salt",
+            "1 cup brewed coffee, cooled",
+            "1/3 cup vegetable oil",
+            "1 tsp vanilla extract",
+            "1 tbsp apple cider vinegar"
+        ],
+        "instructions": [
+            "Preheat the oven to 350\u00b0F (175\u00b0C). Grease and flour a 9-inch round cake pan.",
+            "In a large mixing bowl, whisk together the flour, sugar, cocoa powder, baking soda, and salt.",
+            "Add the coffee, vegetable oil, and vanilla extract to the dry ingredients. Mix until well combined.",
+            "Stir in the apple cider vinegar, which will react with the baking soda and help the cake rise.",
+            "Pour the batter into the prepared cake pan and smooth the top with a spatula.",
+            "Bake for 25-30 minutes or until a toothpick inserted into the center comes out clean.",
+            "Allow the cake to cool in the pan for 10 minutes, then transfer it to a wire rack to cool completely.",
+            "Once cooled, frost the cake with your favorite vegan frosting or serve it plain.",
+            "Slice and enjoy the delicious vegan chocolate cake!"
+        ],
+        "substitution": "",
+        "equipment": [
+            "Cake pan",
+            "oven"
+        ],
+        "time": "45 minutes",
+        "is_quick": "no",
+        "difficulty": "Easy",
+        "is_vegan": "yes"
+    },
+    {
+        "id": 16,
+        "name": "Greek Salad with Feta Cheese",
+        "type": "Salad",
+        "ingredients": [
+            "2 cups mixed salad greens",
+            "1 cup cherry tomatoes, halved",
+            "1/2 cucumber, sliced",
+            "1/4 red onion, thinly sliced",
+            "1/2 cup Kalamata olives",
+            "1/2 cup crumbled feta cheese",
+            "2 tbsp extra virgin olive oil",
+            "1 tbsp lemon juice",
+            "1 tsp dried oregano",
+            "Salt and pepper to taste"
+        ],
+        "instructions": [
+            "In a large salad bowl, combine the mixed salad greens, cherry tomatoes, cucumber, red onion, Kalamata olives, and crumbled feta cheese.",
+            "In a small bowl, whisk together the extra virgin olive oil, lemon juice, dried oregano, salt, and pepper to make the dressing.",
+            "Drizzle the dressing over the salad and toss to coat all the ingredients evenly.",
+            "Serve the Greek salad immediately as a refreshing and nutritious side dish.",
+            "Enjoy your Greek salad with feta cheese!"
+        ],
+        "substitution": "",
+        "equipment": "Salad bowl",
+        "time": "15 minutes",
+        "is_quick": "yes",
+        "difficulty": "Easy",
+        "is_vegan": "no"
+    },
+    {
+        "id": 17,
+        "name": "Honey Mustard Glazed Salmon",
+        "type": "Main Dish",
+        "ingredients": [
+            "4 salmon fillets",
+            "2 tbsp Dijon mustard",
+            "2 tbsp honey",
+            "1 tbsp lemon juice",
+            "2 cloves garlic, minced",
+            "Salt and pepper to taste",
+            "Fresh dill for garnish (optional)"
+        ],
+        "instructions": [
+            "Preheat the oven to 400\u00b0F (200\u00b0C). Line a baking sheet with parchment paper.",
+            "In a small bowl, whisk together the Dijon mustard, honey, lemon juice, minced garlic, salt, and pepper.",
+            "Place the salmon fillets on the prepared baking sheet. Brush the honey mustard glaze evenly over each fillet.",
+            "Bake the salmon in the preheated oven for 12-15 minutes, or until cooked through and flakes easily with a fork.",
+            "Garnish with fresh dill, if desired, and serve the honey mustard glazed salmon with your favorite side dishes.",
+            "Enjoy this delicious and healthy main dish!"
+        ],
+        "substitution": [
+            [
+                "salmon",
+                "trout"
+            ]
+        ],
+        "equipment": [
+            "oven",
+            "baking sheet"
+        ],
+        "time": "20 minutes",
+        "is_quick": "yes",
+        "difficulty": "Easy",
+        "is_vegan": "no"
+    },
+    {
+        "id": 18,
+        "name": "Mushroom and Spinach Stuffed Chicken Breast",
+        "type": "Main Dish",
+        "ingredients": [
+            "2 boneless, skinless chicken breasts",
+            "1 cup sliced mushrooms",
+            "1 cup fresh spinach leaves",
+            "1/2 cup shredded mozzarella cheese",
+            "2 cloves garlic, minced",
+            "1 tbsp olive oil",
+            "1/2 tsp dried thyme",
+            "Salt and pepper to taste"
+        ],
+        "instructions": [
+            "Preheat the oven to 375\u00b0F (190\u00b0C).",
+            "Butterfly the chicken breasts by cutting a slit horizontally through the center, but not all the way through.",
+            "In a skillet, heat the olive oil over medium heat. Add the minced garlic and cook until fragrant.",
+            "Add the sliced mushrooms and cook until softened. Stir in the fresh spinach leaves and cook until wilted.",
+            "Remove the skillet from heat and let the mushroom and spinach mixture cool slightly.",
+            "Stuff each chicken breast with the mushroom and spinach mixture, then sprinkle with shredded mozzarella cheese.",
+            "Season with dried thyme, salt, and pepper. Fold the chicken breasts to enclose the filling.",
+            "Place the stuffed chicken breasts in a baking dish and bake for 25-30 minutes, or until the chicken is cooked through.",
+            "Serve the mushroom and spinach stuffed chicken breast with your favorite side dishes.",
+            "Enjoy this flavorful and satisfying main dish!"
+        ],
+        "substitution": "",
+        "equipment": [
+            "Skillet",
+            "baking dish"
+        ],
+        "time": "40 minutes",
+        "is_quick": "yes",
+        "difficulty": "Intermediate",
+        "is_vegan": "no"
+    },
+    {
+        "id": 19,
+        "name": "Blueberry Pancakes",
+        "type": [
+            "Breakfast",
+            "Dessert"
+        ],
+        "ingredients": [
+            "1 cup all-purpose flour",
+            "1 tbsp sugar",
+            "1 tsp baking powder",
+            "1/2 tsp baking soda",
+            "1/4 tsp salt",
+            "3/4 cup buttermilk",
+            "1/4 cup milk",
+            "1 large egg",
+            "2 tbsp unsalted butter, melted",
+            "1 cup fresh blueberries",
+            "Maple syrup for serving"
+        ],
+        "instructions": [
+            "In a mixing bowl, whisk together the all-purpose flour, sugar, baking powder, baking soda, and salt.",
+            "In a separate bowl, whisk together the buttermilk, milk, egg, and melted butter.",
+            "Pour the wet ingredients into the dry ingredients and stir until just combined. Fold in the fresh blueberries.",
+            "Preheat a griddle or non-stick skillet over medium heat. Lightly grease with butter or cooking spray.",
+            "Pour 1/4 cup of batter onto the griddle for each pancake. Cook until bubbles form on the surface, then flip and cook the other side until golden brown.",
+            "Repeat with the remaining batter, adding more butter or cooking spray as needed.",
+            "Serve the blueberry pancakes warm with maple syrup.",
+            "Enjoy this delicious and fluffy breakfast treat!"
+        ],
+        "substitution": [
+            [
+                "milk",
+                "plant-based milk"
+            ],
+            [
+                "butter",
+                "vegan butter"
+            ]
+        ],
+        "equipment": "skillet",
+        "time": "20 minutes",
+        "is_quick": "yes",
+        "difficulty": "Easy",
+        "is_vegan": "no"
+    },
+    {
+        "id": 20,
+        "name": "Vegan Lentil Soup",
+        "type": "Soup",
+        "ingredients": [
+            "1 cup dried lentils",
+            "1 onion, chopped",
+            "2 carrots, diced",
+            "2 celery stalks, diced",
+            "3 cloves garlic, minced",
+            "4 cups vegetable broth",
+            "1 can diced tomatoes",
+            "1 tsp cumin",
+            "1 tsp paprika",
+            "1/2 tsp turmeric",
+            "Salt and pepper to taste",
+            "2 tbsp olive oil"
+        ],
+        "instructions": [
+            "Rinse the lentils and set aside.",
+            "In a large pot, heat the olive oil over medium heat. Add the chopped onion, diced carrots, and diced celery. Cook until the vegetables are softened.",
+            "Add the minced garlic, cumin, paprika, and turmeric to the pot. Stir and cook for another minute.",
+            "Pour in the vegetable broth and diced tomatoes (with their juice). Add the rinsed lentils to the pot.",
+            "Bring the soup to a boil, then reduce the heat to low and let it simmer for about 30-40 minutes, or until the lentils are tender.",
+            "Season with salt and pepper to taste. Adjust the seasonings if needed.",
+            "Serve the vegan lentil soup hot and enjoy!",
+            "You can also garnish with fresh herbs or a squeeze of lemon juice, if desired."
+        ],
+        "substitution": "",
+        "equipment": "Large pot",
+        "time": "45 minutes",
+        "is_quick": "no",
+        "difficulty": "Easy",
+        "is_vegan": "yes"
+    },
+    {
+        "id": 21,
+        "name": "Roasted Lemon Herb Chicken",
+        "type": "Main Dish",
+        "ingredients": [
+            "1 whole chicken",
+            "2 lemons, sliced",
+            "4 cloves of garlic, minced",
+            "1 tablespoon fresh rosemary, chopped",
+            "1 tablespoon fresh thyme leaves",
+            "2 tablespoons olive oil",
+            "Salt and pepper to taste"
+        ],
+        "instructions": [
+            "Preheat the oven to 375\u00b0F (190\u00b0C).",
+            "Rinse the chicken and pat it dry with paper towels.",
+            "In a small bowl, combine the minced garlic, chopped rosemary, thyme leaves, olive oil, salt, and pepper.",
+            "Rub the garlic and herb mixture all over the chicken, including under the skin and inside the cavity.",
+            "Place the lemon slices inside the cavity of the chicken.",
+            "Tie the chicken legs together with kitchen twine and tuck the wings under the body.",
+            "Place the chicken on a roasting pan or baking dish.",
+            "Roast the chicken in the preheated oven for about 1.5 to 2 hours, or until the internal temperature reaches 165\u00b0F (74\u00b0C) and the skin is golden brown and crispy.",
+            "Remove the chicken from the oven and let it rest for about 10 minutes before carving.",
+            "Serve the roasted lemon herb chicken with your favorite side dishes and enjoy!"
+        ],
+        "substitution": "",
+        "equipment": "Oven",
+        "time": "1.5 to 2 hours",
+        "is_quick": "no",
+        "difficulty": "Medium",
+        "is_vegan": "no"
+    },
+    {
+        "id": 22,
+        "name": "Wild Cherry Crumble",
+        "type": "Dessert",
+        "ingredients": [
+            "2 cups wild cherry, pitted",
+            "1/2 cup granulated sugar",
+            "1 tablespoon cornstarch",
+            "1 tablespoon lemon juice",
+            "1 cup all-purpose flour",
+            "1/2 cup rolled oats",
+            "1/2 cup brown sugar",
+            "1/2 teaspoon ground cinnamon",
+            "1/4 teaspoon salt",
+            "1/2 cup unsalted butter, cold and diced"
+        ],
+        "instructions": [
+            "Preheat the oven to 375\u00b0F (190\u00b0C) and lightly grease a baking dish.",
+            "In a bowl, combine the pitted wild cherries, granulated sugar, cornstarch, and lemon juice. Toss to coat the cherries evenly.",
+            "Transfer the cherry mixture to the greased baking dish, spreading it out evenly.",
+            "In a separate bowl, combine the all-purpose flour, rolled oats, brown sugar, ground cinnamon, and salt.",
+            "Add the cold diced butter to the dry mixture and use your fingers or a fork to cut it into the flour mixture until crumbly.",
+            "Sprinkle the crumble mixture evenly over the cherry filling in the baking dish.",
+            "Bake in the preheated oven for about 30-35 minutes, or until the cherry filling is bubbly and the top is golden brown.",
+            "Remove from the oven and let it cool for a few minutes before serving.",
+            "Serve the warm wild cherry crumble as is or with a scoop of vanilla ice cream.",
+            "Enjoy this delicious dessert!"
+        ],
+        "substitution": "",
+        "equipment": [
+            "Baking dish",
+            "Oven"
+        ],
+        "time": "30-35 minutes",
+        "is_quick": "yes",
+        "difficulty": "Easy",
+        "is_vegan": "yes"
+    }
+]

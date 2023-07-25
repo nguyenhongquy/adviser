@@ -8,6 +8,7 @@ from services.service import Service, PublishSubscribe, DialogSystem
 from services.hci import ConsoleInput, ConsoleOutput
 from utils.logger import DiasysLogger, LogLevel
 
+from query_database import query_database
 
 sys.path.append('../soloist')
 os.environ['CUDA_VISIBLE_DEVICES'] = '8' # should be available at test time
@@ -95,6 +96,8 @@ class WizardService(Service):
                                     'sys_utterance': ''}):
         Service.__init__(self, domain=domain)
         self.memory = []
+        # required by query_database to save its state
+        self.db_state = None
 
     @PublishSubscribe(sub_topics=["gen_user_utterance"], pub_topics=["sys_utterance"])
     def generate_sys_utterance(self, gen_user_utterance):
@@ -110,10 +113,12 @@ class WizardService(Service):
     
     def say_something_meaningful(self, gen_user_utterance):
         self.update_memory(gen_user_utterance)
-        print(f"***History tracker: {self.memory}***\n")
+        #print(f"***History tracker: {self.memory}***\n")
         response, bs = get_response(self.memory)
-        print(f"***Belief States tracker: {bs}***\n")
-        return response
+        #print(f"***Belief States tracker: {bs}***\n")
+
+        result, self.db_state = query_database(bs, response, self.db_state)
+        return result
     
     def update_memory(self, utterance):
         self.memory.append(utterance.strip())
