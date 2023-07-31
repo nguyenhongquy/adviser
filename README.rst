@@ -31,7 +31,9 @@ If ``Git`` is installed on your machine, you may instead clone the repository by
 
 .. code-block:: bash
 
-    git clone https://github.com/DigitalPhonetics/adviser.git
+    git clone https://github.com/nguyenhongquy/adviser.git
+    git submodule init
+    git submodule update
 
 System Library Requirements
 ---------------------------
