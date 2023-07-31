@@ -10,7 +10,7 @@
 Documentation
 =============
 
-    Please see the `documentation <https://digitalphonetics.github.io/adviser/>`_ for more details.
+    Please see the `report <https://docs.google.com/document/d/1F-HPy6cI-tPWWeAzBCw6Mpq-yxSDs__dQhwoWS1HvEc/edit?usp=sharing/>`_ for more details.
 
 Installation
 ============
