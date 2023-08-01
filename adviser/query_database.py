@@ -119,7 +119,8 @@ def query_database(belief : dict, response: str, db_state=None):
    random.shuffle(matches)
    # lexicalize response
    if len(matches) == 0:
-      response = 'Sorry. I do not have any recipe that meet your requests at the moment. What else can I help you?'
+      return response, db_state
+      # response = 'Sorry. I do not have any recipe that meet your requests at the moment. What else can I help you?'
    else:
       if 'recipe_name_1' in response:
          name = matches[0][1]

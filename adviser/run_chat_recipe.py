@@ -102,10 +102,10 @@ class WizardService(Service):
     @PublishSubscribe(sub_topics=["gen_user_utterance"], pub_topics=["sys_utterance"])
     def generate_sys_utterance(self, gen_user_utterance):
         if gen_user_utterance == '':
-            return {'sys_utterance': 'Please chat with the agent'}
+            return {'sys_utterance': 'Hello! I could recommend recipes. What do you want to cook today?'}
         elif 'bye' in gen_user_utterance:
             self.memory = []
-            return {'sys_utterance': 'Good bye'}
+            return {'sys_utterance': 'Thank you for using our service. Good bye'}
         else:
             response = self.say_something_meaningful(gen_user_utterance)
             self.memory.append(response)
@@ -135,7 +135,7 @@ error_free = ds.is_error_free_messaging_pipeline()
 if not error_free:
     ds.print_inconsistencies()
 
-ds.draw_system_graph()
+# ds.draw_system_graph()
 
 number_dialogues = 12
 for _ in range(number_dialogues):
