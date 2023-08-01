@@ -17,9 +17,9 @@ from soloist.server import *
 args.model_name_or_path = '../soloist/soloist/finetuned_models/all_9e_baseline'
 
 print("imported recipe model")
-args.length = 50
 main()
 
+#TODO: system output reasonable response but the query database does not work properly
 def parse(sampled_results: str) -> tuple((dict, str)):
     """
     """
@@ -115,7 +115,8 @@ class WizardService(Service):
         self.update_memory(gen_user_utterance)
         #print(f"***History tracker: {self.memory}***\n")
         response, bs = get_response(self.memory)
-        #print(f"***Belief States tracker: {bs}***\n")
+        print(f"***Belief States tracker: {bs}***\n")
+        print(f"***Delexicalized response: {response}***\n")
 
         result, self.db_state = query_database(bs, response, self.db_state)
         return result
