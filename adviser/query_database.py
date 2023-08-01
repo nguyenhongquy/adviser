@@ -60,17 +60,20 @@ def query_database(belief : dict, response: str, db_state=None):
       response:
    return:
       lexicalized response to be shown in the bot
-      db_state to keep track of recommended recipe
+      db_state to keep track of recommended recipes
    """
+
    # initialize db_state
    if db_state is None:
       db_state = {}
+   
+   # query database from belief states
    query = "SELECT * FROM Recipes WHERE"
    for slot, val in belief.items():
       #get rig of some strange tokens
       val = val.replace('<EOB> <EOKB> <EODP>', '')
       val = val.strip()
-      if val == 'recommended_recipe_name_1' or val == '[recommended_recipe_name_1]':
+      if 'recommended_recipe_name_1' in val:
          if 'recommended_recipe_name_1' in db_state.keys():
             name = db_state['recommended_recipe_name_1']
             name = "'" f'%{name}%' + "'"
@@ -78,7 +81,7 @@ def query_database(belief : dict, response: str, db_state=None):
             break
          else:
             continue
-      elif val == 'recommended_recipe_name_2' or val == '[recommended_recipe_name_2]':
+      elif 'recommended_recipe_name_2' in val:
          if 'recommended_recipe_name_2' in db_state.keys():
             name = db_state['recommended_recipe_name_2']
             name = "'" f'%{name}%' + "'"
@@ -117,6 +120,7 @@ def query_database(belief : dict, response: str, db_state=None):
    cursor.execute(query)  
    matches = cursor.fetchall() 
    random.shuffle(matches)
+
    # lexicalize response
    if len(matches) == 0:
       return response, db_state
@@ -132,7 +136,12 @@ def query_database(belief : dict, response: str, db_state=None):
             response = response.replace('recipe_name_2', name)
             db_state['recommended_recipe_name_2'] = name
          else:
-            response = 'Sorry. That is the only recipe I have that meet your request. What else can I help you?'
+            if 'recommended_recipe_name_1' not in db_state.keys():
+               name = matches[0][1]
+               response = response.replace('recipe_name_2', name)
+               db_state['recommended_recipe_name_1'] = name 
+            else:
+               response = 'Sorry. That is the only recipe I have that meet your request. What else can I help you?'
       if 'recipe_type' in response:
          type = matches[0][2]
          response = response.replace('recipe_type', type)
@@ -173,6 +182,7 @@ def query_database(belief : dict, response: str, db_state=None):
       # get rid of remaining brackets
       response = response.replace('[', '')
       response = response.replace(']', '')
+      
    return response, db_state
 
 if __name__ == "__main__":

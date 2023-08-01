@@ -130,13 +130,11 @@ class WizardService(Service):
             return {'sys_utterance': response}
     
     def say_something_meaningful(self, gen_user_utterance):
-        """.DS_Store"""
-        self.memory.append(gen_user_utterance.strip())
-        # self.update_memory(gen_user_utterance)
-        #print(f"***History tracker: {self.memory}***\n")
-        response, bs = predictor(self.memory)
+        self.update_memory(gen_user_utterance)
+        print(f"***History tracker: {self.memory}***\n")
+        response, bs = get_response(self.memory)
         print(f"***Belief States tracker: {bs}***\n")
-        print(f"***Delexicalized response: {response}***\n")
+        print(f'response from system: {response}')
 
         result, self.db_state = query_database(bs, response, self.db_state)
         return result
