@@ -19,7 +19,6 @@ args.model_name_or_path = '../soloist/soloist/finetuned_models/all_9e_extra'
 print("imported recipe model")
 main()
 
-#TODO: system output reasonable response but the query database does not work properly
 def parse(sampled_results: list) -> tuple((dict, str)):
     """
     Parse the list of generated text and return 1 belief state and 1 response
@@ -101,20 +100,6 @@ def predictor(context: list, max_turn: int = 15) -> tuple((str, dict)):
 
     return response, belief_states
 
-# def get_response(context):
-#     """
-#     Help function to obtain res
-#     """
-#     response, belief_states = predictor(context)
-#     return response, belief_states
-
-
-# Input modules (just allow access to terminal for text based dialog)
-# user_in: (sub_topics=[Topic.DIALOG_END], pub_topics=["gen_user_utterance"])
-user_in = ConsoleInput(domain="")
-# user_out: (sub_topics=["sys_utterance"], pub_topics=[Topic.DIALOG_END])
-user_out = ConsoleOutput(domain="")
-
 
 class WizardService(Service):
     """
@@ -155,17 +140,18 @@ class WizardService(Service):
 
         result, self.db_state = query_database(bs, response, self.db_state)
         return result
-    
-    # def update_memory(self, utterance):
-    #     self.memory.append(utterance.strip())
-    #     return None
-        
 
 logger = DiasysLogger(console_log_lvl=LogLevel.DIALOGS)
-
+# Input modules (just allow access to terminal for text based dialog)
+# user_in: (sub_topics=[Topic.DIALOG_END], pub_topics=["gen_user_utterance"])
+user_in = ConsoleInput(domain="")
+# user_out: (sub_topics=["sys_utterance"], pub_topics=[Topic.DIALOG_END])
+user_out = ConsoleOutput(domain="")
+# initialize our main service
 wizard_service = WizardService()
+# chain all services together
 ds = DialogSystem(services=[user_in, user_out, wizard_service])
-
+# check if error
 error_free = ds.is_error_free_messaging_pipeline()
 if not error_free:
     ds.print_inconsistencies()
@@ -174,7 +160,7 @@ if not error_free:
 
 number_dialogues = 12
 for i in range(number_dialogues):
-    print(f"Dialogue # {i}")
+    print(f"Dialogue # {i+1}")
     ds.run_dialog({'gen_user_utterance': ""})
 
 ds.shutdown()
