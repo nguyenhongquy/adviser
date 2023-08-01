@@ -9,7 +9,7 @@
 
 Documentation
 =============
-* For Adviser 2.0, please refer to the `README <https://github.com/DigitalPhonetics/adviser>`
+* For Adviser 2.0, please refer to the `README <https://github.com/DigitalPhonetics/adviser>`_
 * Here we only explain briefly how to integrate an end-to-end dialogue system to Adviser
 * Please see the `report <https://docs.google.com/document/d/1F-HPy6cI-tPWWeAzBCw6Mpq-yxSDs__dQhwoWS1HvEc/edit?usp=sharing/>`_ for more details.
 
