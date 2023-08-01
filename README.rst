@@ -21,7 +21,4 @@ Clone the repository by entering in a terminal window:
 .. code-block:: bash
 
     git clone https://github.com/nguyenhongquy/adviser.git
-    git submodule init
-    git submodule update
-
 
