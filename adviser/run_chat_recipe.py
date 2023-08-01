@@ -14,7 +14,7 @@ sys.path.append('../soloist')
 os.environ['CUDA_VISIBLE_DEVICES'] = '8' # should be available at test time
 
 from soloist.server import *
-args.model_name_or_path = '../soloist/soloist/finetuned_models/all_9e_baseline'
+args.model_name_or_path = '../soloist/soloist/finetuned_models/all_9e_extra'
 
 print("imported recipe model")
 args.length = 50
@@ -113,9 +113,10 @@ class WizardService(Service):
     
     def say_something_meaningful(self, gen_user_utterance):
         self.update_memory(gen_user_utterance)
-        #print(f"***History tracker: {self.memory}***\n")
+        print(f"***History tracker: {self.memory}***\n")
         response, bs = get_response(self.memory)
-        #print(f"***Belief States tracker: {bs}***\n")
+        print(f"***Belief States tracker: {bs}***\n")
+        print(f'response from system: {response}')
 
         result, self.db_state = query_database(bs, response, self.db_state)
         return result
