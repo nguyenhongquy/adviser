@@ -9,228 +9,127 @@
 
 Documentation
 =============
-
-    Please see the `documentation <https://digitalphonetics.github.io/adviser/>`_ for more details.
+* For Adviser 2.0, please refer to the `README <https://github.com/DigitalPhonetics/adviser>`_
+* Here we only explain briefly how to integrate an end-to-end dialogue system, namely SOLOIST to Adviser
+* Please see the `report <https://docs.google.com/document/d/1F-HPy6cI-tPWWeAzBCw6Mpq-yxSDs__dQhwoWS1HvEc/edit?usp=sharing/>`_ for more details.
 
 Installation
 ============
 
-Note: Adviser 2.0 is currently only tested on Linux and Mac (for M1 chips see the extra section near the bottom of this file).
-(Windows is possible using WSL2 or check the instructions at the bottom for an experimental Windows setup)
-
-Downloading the code
---------------------
-
-If ``Git`` is not installated on your machine, just download the Adviser 2.0 file available in ``relases`` section. Then unzip and navigate to the main folder.
-Note that this method has some disadvantages (you'll only be able to run basic text-to-text terminal conversations).
-
-Cloning the repository (recommended)
-------------------------------------
-
-If ``Git`` is installed on your machine, you may instead clone the repository by entering in a terminal window:
+* Clone the repository by entering in a terminal window:
 
 .. code-block:: bash
 
-    git clone https://github.com/DigitalPhonetics/adviser.git
+    git clone https://github.com/nguyenhongquy/adviser.git
 
-System Library Requirements
----------------------------
-
-* If you want to use speech in-/output, please make sure you have the `hdf5`, `portaudio` and `sndfile` libraries installed.
-* If you want to make use of the function ``services.service.Service.draw_system_graph``,
-you will need to install the ``graphviz`` library via your system's package manager.
-If you can't install it (no sufficient user rights), don't use this function in your scripts.
-
-On Ubuntu e.g.:
-
-``sudo apt-get install graphviz``
-
-On Mac, you will need to install homebrew by executing:
-
-``/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"``
-
-and then calling ``brew install graphviz``.
-
-For other OS please see https://graphviz.gitlab.io/download/.
-
-
-Install python requirements with pip
-------------------------------------
-
-ADvISER needs to be executed in a Python3 environment.
-
-Once you obtained the code, navigate to its top level directory where you will find the file
-``requirements_base.txt``, which lists all modules you need to run a basic text-to-text version of ADvISER. We suggest to create a
-virtual environment from the top level directory, as shown below, followed by installing the necessary packages.
-
-
-1. (Requires pip or pip3) Make sure you have virtualenv installed by executing
+* change to the directory of soloist (adviser/soloist)
 
 .. code-block:: bash
 
-    python3 -m pip install --user virtualenv
+   git submodule init
+   git submodule update
 
-2. Create the virtual environment (replace envname with a name of your choice)
-
-.. code-block:: bash
-
-    python3 -m venv <path-to-env>
-
-3. Source the environment (this has to be repeated every time you want to use ADVISER inside a
-new terminal session)
+* We recommend creating a virtual environment using conda
 
 .. code-block:: bash
 
-    source <path-to-env>/bin/activate
+   conda create -n myenv python=3.6
 
-4. Install the required packages
-
-.. code-block:: bash
-
-    pip install -r requirements_base.txt 
- 
-(NOTE: or requirements_multimodal.txt if you want to use ASR / TTS)
-
-
-5. Navigate to the adviser folder
+Alternatively, with a path name
 
 .. code-block:: bash
 
-    cd adviser
+   conda create -p /path/to/myenv python=3.6
 
-and, to make sure your installation is working, execute
-
-
-.. code-block:: bash
-
-    python run_chat.py lecturers
-    
-You can type text to chat with the system (confirm your utterance by pressing the ``Enter``-Key once) or type ``bye`` (followed by pressing the ``Enter``-Key once) to end the conversation.
-
-To see more of the available options, run
+* Activate virtual environment
 
 .. code-block:: bash
 
-    python run_chat.py --help
+   conda activate /path/to/myenv
 
 
-6. OPTIONAL: If you want to use multimodal functionallity, e.g. ASR / TTS/ ..., download the models via the script ``download_models.sh`` found in the top level folder
+* Install dependencies
+
+Navigate to the root directory of adviser, where you see `requirements_soloist_recipe.txt`
 
 .. code-block:: bash
 
-    sh download_models.sh
+   pip install -r requirements_soloist_recipe.txt
+
+* Download pretrained model
    
-NOTE: this also requires you to install ``requirements_multimodal.txt`` in ``step 4``.
+   * gtg_pretrained 
+   https://drive.google.com/file/d/1BNhY_GCx5f_Ubv_8mx6PHa6mFDAG7ujh/view?usp=drive_link
+   
+   * finetuned_models
+   https://drive.google.com/drive/folders/1VjnxouEe04yrokzllFpevXi7Jw-h_JDK?usp=sharing
 
-You can enable ASR / TTS by adding ``--asr`` and ``--tts`` to the command line options of ``run_chat.py`` (NOTE: for TTS, we recommend you run the code on a CUDA-enabled device and append ``--cuda`` to the command line options for drastic performance increase).
-
-7. OPTIONAL: If you want to run the demo with all services enabled, please make sure you executed step 6 and installed the  ``requirements_multimodal.txt``. Then, additional requirements must be compiled by yourself - follow the guide in ``tools/OpenFace/how_to_install.md`` for this.
-
-Then, try running 
-
-``python run_demo_multidomain.py``
-
-
-
-Instructions for Macs with M1 Chips 
-===================================
-
-In general, everything should work if you're using ``conda`` instead of ``pip``.
-For pip users, the following installation instructions worked:
-
-1. Install the system library requirements as stated above (using ``homebrew``).
-
-2. Install additional reqiuirements: ``brew install rust`` and ``brew install portaudio``
-
-2.  pip install -i https://pypi.anaconda.org/numba/label/wheels_experimental_m1/simple numba
-
-3. Remove pyaudio from the requirements file and instead execute this command to install pyaudio:
+* Copy ``gtg_pretrained`` and ``finetuned_models`` to the same directory where you see soloist_train.py, that is:
 
 .. code-block:: bash
-    
-    python -m pip install --global-option='build_ext' --global-option='-I/opt/homebrew/Cellar/portaudio/19.7.0/include' --global-option='-L/opt/homebrew/Cellar/portaudio/19.7.0/lib' pyaudio
 
-4. Proceed with installing requirements as described above
+   soloist/soloist/gtg_pretrained
+   soloist/soloist/finetuned_models
 
-5. Switch to the adviser folder ``cd adviser`` (containing the ``run_chat.py`` file)
+Training Data Preparation
+=========================
+**Data format**
 
-6. Copy the snd library into the current folder:
+.. code-block:: json
 
-.. code-block:: bash
-    
-    cp /opt/homebrew/lib/libsndfile.dylib
-    
-
-Experimental Windows Instructions
-====================================
-
-NOTE: Windows support is not thoroughly tested so far and in experimental stage! Only tested on Windows 11 so far.
-If you encounter an error message about failing to build some library while installing the python dependencies, try installing the vcc build tools and repeat the failing step (https://visualstudio.microsoft.com/de/visual-cpp-build-tools/, yselect Desktop Development with C++ in installer).
-
-
-0. Install Anaconda from https://www.anaconda.com/
-   IMPORTANT: The following commands have to be executed from the Anaconda prompt!
-   
-1. Create a virtual env for python3.8 using conda 
-   (there are no precompiled pyaudio packages for newer python versions at the time of writing)
-
-.. code-block:: bash
-   
-   conda create -n YOURVIRTUALENV python=3.8
-
-2. Install pytorch from https://pytorch.org/get-started/locally/ .
-   Select options ``build: stable``, ``os0: windows``, ``package: conda``, ``language: python``, ``compute platform: cuda XX.X`` if you have an NVIDIA GPU, else ``platform: cpu``
-   
-3. Download sqlite3 precompiled library for Windows from https://www.sqlite.org/download.html .
-   After unzipping, you will find a file ``sqlite3.dll``. 
-   Copy this file into the DLL folder of your virtual environment (usually located at ``C:\Users\YOURSELF\anaconda3\envs\YOURVIRTUALENV\DLLs\``).
-
-4. Download and install grapviz installer for windows (version 4.X): https://www.graphviz.org/download/
-
-If you don't want a multimodal setup, SKIP STEPS 5) and 6)
-
-5. Install precompiled pyaudio
-
-.. code-block:: bash
-   
-   conda install pyaudio
-   
-6. Download trained models from http://adviserresources.ims.uni-stuttgart.de/models/adviser_models.zip and unzip into ``adviser/resources/models`` (folder 'models' does not exist initially)
-
-7. Remove from the files ``requirements.txt`` and ``requirements_multimodal.txt`` the lines starting with ``torch``, ``torchaudio``, ``PyAudio``.
-
-8. Install the requirements from either ```requirements.txt`` or ``requirements_multimodal.txt`` if you want a multimodal setup.
-
-Building the documentation
-==========================
-
-1. Install the Python packages from ``requirements_doc.txt``.
-
-2. Run ``PYTHONPATH=./adviser mkdocs build`` or ``PYTHONPATH=./adviser mkdocs gh-deploy`` for pushing directly to GitHub Pages.
-
-Support
-=======
-You can ask questions by sending emails to adviser-support@ims.uni-stuttgart.de.
-
-You can also post bug reports and feature requests in GitHub issues.
-
-.. _home:how_to_cite:
-
-How to cite
-===========
-If you use or reimplement any of this source code, please cite the following paper:
-
-.. code-block:: bibtex
-
-   @InProceedings{
-    title =     {ADVISER: A Toolkit for Developing Multi-modal, Multi-domain and Socially-engaged Conversational Agents},
-    author =    {Chia-Yu Li and Daniel Ortega and Dirk V{\"{a}}th and Florian Lux and Lindsey Vanderlyn and Maximilian Schmidt and Michael Neumann and Moritz V{\"{o}}lkel and Pavel Denisov and Sabrina Jenne and Zorica Karacevic and Ngoc Thang Vu},
-    booktitle = {Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (ACL 2020) - System Demonstrations},
-    publisher = {Association for Computational Linguistics},
-    location =  {Seattle, Washington, USA},
-    year =      {2020}
+    {
+        "history": [
+            "user : I'm in the mood for a dessert. Can you suggest something sweet? "
+        ],
+        "kb": "kb : more than three",
+        "belief": "belief : type = dessert ; ingredients = not mentioned ",
+        "reply": "system : Sure! I have a few recipes for dessert. Do you have any preferences or restrictions?",
+        "dp": "dp : request ( ingredients ) "
     }
 
-License
-=======
-Adviser is published under the GNU GPL 3 license.
+We use json to represent a training example. As shown in the example, it contains the following fields:
+
+* **history** - The context from session beginning to current turn.
+
+* **belief** - The belief state of the user (slot - value pair). 
+
+* **kb** - Database query results. If not blank, inference is slower but better.
+
+* **reply** - The target system respose. It can be a template, an api call or natural language.
+
+* **dp** - The system action or dialogue policy.
+
+We create a mini corpus with 40 training dialogues, 10 for validation and 20 for testing purpose. Each split is in the same format of SOLOIST training data.
+
+**Training**
+
+Please refer to documentation in `submodule <https://github.com/Yen444/soloist>`_ SOLOIST. 
+
+**Interaction** 
+
+* Under adviser/adviser directory
+
+.. code-block:: bash
+   
+   python run_chat_recipe.py
+  
+
+Belows is the chat history using the baseline model. Note that there're some errors in belief states prediction, fortunately the model still outputs reasonable responses. For a detailed error analysis, please refer to our  `report <https://docs.google.com/document/d/1F-HPy6cI-tPWWeAzBCw6Mpq-yxSDs__dQhwoWS1HvEc/edit?usp=sharing/>`_.
+
+.. code-block:: bash
+>>> hi i want to make a main dish with beef
+***Belief States tracker: {'type': 'main dish', 'ingredients': 'beef'}***
+***Delexicalized response: Sure ! I have a delicious recipe for [recipe_name_1] . What do you think ?***
+System: Sure ! I have a delicious recipe for Beef Tacos with Chipotle Sauce . What do you think ?
+>>> what do i need for that recipe?
+***Belief States tracker: {'equipment': 'beef', 'type': 'main dish', 'ingredients': 'not mentioned', 'name': '[recommended_recipe_name_1]'}***
+***Delexicalized response: You will need [recipe_ingredients] for the recipe .***
+System: You will need '1 lb ground beef', '1 onion, chopped', '2 cloves garlic, minced', '1 tbsp chipotle pepper in adobo sauce, minced', '1 tsp ground cumin', '1 tsp chili powder', 'Salt and pepper to taste', '8 small flour tortillas', 'Toppings: shredded lettuce, diced tomatoes, shredded cheese, sour cream', 'Optional garnish: fresh cilantro, lime wedges' for the recipe .
+>>> and how long does it take?
+***Belief States tracker: {'type': 'main dish', 'ingredients': 'beef', 'name': '[recommended_recipe_name_1]'}***
+***Delexicalized response: it takes [recipe_time] .***
+System: it takes 30 minutes .
+>>> sounds good, give me the instruction
+***Belief States tracker: {'ingredients': 'negative mustard', 'type': 'main dish', 'name': '[recommended_recipe_name_2]'}***
+***Delexicalized response: Here are the instructions : [recipe_instructions] , [recipe_instructions]***
+System: Here are the instructions : 'In a large skillet, cook the ground beef over medium heat until browned.', 'Add the chopped onion, minced garlic, chipotle pepper, cumin, chili powder, salt, and pepper. Cook for an additional 5 minutes.', 'Warm the flour tortillas in a separate skillet or in the microwave.', 'Assemble the tacos by placing a spoonful of the beef mixture onto each tortilla. Add your desired toppings.', 'Garnish with fresh cilantro and serve with lime wedges on the side.', 'Enjoy your delicious beef tacos with chipotle sauce!' , 'In a large skillet, cook the ground beef over medium heat until browned.', 'Add the chopped onion, minced garlic, chipotle pepper, cumin, chili powder, salt, and pepper. Cook for an additional 5 minutes.', 'Warm the flour tortillas in a separate skillet or in the microwave.', 'Assemble the tacos by placing a spoonful of the beef mixture onto each tortilla. Add your desired toppings.', 'Garnish with fresh cilantro and serve with lime wedges on the side.', 'Enjoy your delicious beef tacos with chipotle sauce!'
