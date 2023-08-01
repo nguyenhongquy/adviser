@@ -66,4 +66,5 @@ Please refer to documentation in `submodule <https://github.com/Yen444/soloist>`
 
 .. code-block:: bash
 
+   # under adviser/adviser directory
    python run_chat_recipe.py
