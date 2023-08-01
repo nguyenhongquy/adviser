@@ -58,13 +58,14 @@ We use json to represent a training example. As shown in the example, it contain
 
 We create a mini corpus with 40 training dialogues, 10 for validation and 20 for testing purpose. Each split is in the same format of SOLOIST training data.
 
-**Training***
+**Training**
 
 Please refer to documentation in `submodule <https://github.com/Yen444/soloist>`_ SOLOIST. 
 
 **Interaction** 
 
-.. code-block:: bash
+* Under adviser/adviser directory
 
-   # under adviser/adviser directory
+.. code-block:: bash
+   
    python run_chat_recipe.py
