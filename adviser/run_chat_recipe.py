@@ -126,15 +126,20 @@ class WizardService(Service):
             return {'sys_utterance': 'Thank you for using our service. Good bye!'}
         else:
             response = self.say_something_meaningful(gen_user_utterance)
-            self.memory.append(response)
+            self.memory.append(response.strip())
             return {'sys_utterance': response}
     
     def say_something_meaningful(self, gen_user_utterance):
-        self.update_memory(gen_user_utterance)
-        print(f"***History tracker: {self.memory}***\n")
-        response, bs = get_response(self.memory)
-        print(f"***Belief States tracker: {bs}***\n")
-        print(f'response from system: {response}')
+        """
+        Generate answer for user's utterance
+        """
+
+        # self.update_memory(gen_user_utterance)
+        self.memory.append(gen_user_utterance.strip())
+        # print(f"***History tracker: {self.memory}***\n")
+        response, bs = predictor(self.memory)
+        print(f"***Belief States tracker: {bs}***")
+        print(f"***Delexicalize response: {response}")
 
         result, self.db_state = query_database(bs, response, self.db_state)
         return result
@@ -158,7 +163,7 @@ if not error_free:
 
 number_dialogues = 12
 for i in range(number_dialogues):
-    print(f"Dialogue # {i+1}")
+    print("="*20,f"Dialogue # {i+1}", "="*20)
     ds.run_dialog({'gen_user_utterance': ""})
 
 ds.shutdown()
